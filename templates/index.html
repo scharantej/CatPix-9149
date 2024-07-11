@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cats</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<div class="row">
+{% for cat in cat_images %}
+<div class="col-sm-4">
+<div class="card">
+<img src="{{ cat.image }}" class="card-img-top" alt="{{ cat.name }}">
+<div class="card-body">
+<h5 class="card-title">{{ cat.name }}</h5>
+<p class="card-text">{{ cat.breed }}</p>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+</body>
+</html>
+
+
